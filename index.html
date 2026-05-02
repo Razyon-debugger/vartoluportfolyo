@@ -5,51 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pusat Studio | Portfolio</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #0f0f0f; color: white; margin: 0; padding: 0; }
-        header { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #1a1a1a 0%, #000 100%); border-bottom: 2px solid #00ffcc; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .card { background: #1e1e1e; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #333; }
-        h2 { color: #00ffcc; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .skill-container { margin-bottom: 15px; }
-        .skill-bar { background: #333; border-radius: 20px; height: 10px; width: 100%; margin-top: 5px; }
-        .skill-fill { background: #00ffcc; height: 100%; border-radius: 20px; }
-        .btn { display: inline-block; padding: 10px 20px; background: #5865F2; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
-        .btn:hover { background: #4752c4; }
-        .tag { background: #333; padding: 5px 10px; border-radius: 5px; font-size: 14px; color: #00ffcc; margin-right: 5px; }
+        :root { --main-color: #00ffcc; --bg-color: #0b0e14; --card-bg: #161b22; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg-color); color: #e6edf3; margin: 0; line-height: 1.6; }
+        header { height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle, #1a2332 0%, #0b0e14 100%); border-bottom: 1px solid #30363d; }
+        h1 { font-size: 3rem; margin: 0; color: var(--main-color); text-shadow: 0 0 20px rgba(0,255,204,0.3); }
+        .container { max-width: 800px; margin: -50px auto 50px; padding: 20px; }
+        .card { background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #30363d; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--main-color); }
+        h2 { color: var(--main-color); margin-top: 0; font-size: 1.5rem; }
+        .skill-box { margin-bottom: 20px; }
+        .skill-bar { height: 12px; background: #21262d; border-radius: 10px; overflow: hidden; margin-top: 8px; }
+        .skill-per { height: 100%; background: linear-gradient(90deg, #00ffcc, #0088ff); border-radius: 10px; transition: 1.5s cubic-bezier(0.1, 0, 0.2, 1); width: 0; }
+        .discord-btn { display: inline-block; background: #5865F2; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(88,101,242,0.3); }
+        .discord-btn:hover { background: #4752c4; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
 <header>
     <h1>PUSAT STUDIO</h1>
-    <p>Oyun Geliştiricisi & Yazılımcı</p>
+    <p style="color: #8b949e; letter-spacing: 2px;">GAMEDEV | SOFTWARE | DESIGN</p>
 </header>
 
 <div class="container">
     <section class="card">
-        <h2>Aktif Projeler</h2>
-        <p><strong>🤖 VartoluBot:</strong> Yapım aşamasında.</p>
-        <p><strong>🖱️ Clicker Simulator Legacy:</strong> Roblox projem.</p>
-        <p><em>Ve çok daha fazlası yolda...</em></p>
+        <h2>Aktif Projelerim</h2>
+        <p>🚀 <strong>VartoluBot:</strong> Yeni nesil Discord asistanı. (Geliştiriliyor)</p>
+        <p>🎮 <strong>Clicker Simulator Legacy:</strong> Roblox tabanlı simülasyon deneyimi.</p>
+        <p>🌍 <strong>Ranelrome OS:</strong> Tarayıcı tabanlı işletim sistemi simülasyonu.</p>
     </section>
 
     <section class="card">
-        <h2>Motor & Dil Tecrübesi</h2>
-        <div class="skill-container">
-            <span>Roblox Studio (%80) - Luau (%70)</span>
-            <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+        <h2>Yetenekler</h2>
+        <div class="skill-box">
+            <span>Roblox Studio & Luau</span>
+            <div class="skill-bar"><div class="skill-per" style="width: 80%;"></div></div>
         </div>
-        <div class="skill-container">
-            <span>Unreal Engine (%20) - Blueprint (%40)</span>
-            <div class="skill-bar"><div class="skill-fill" style="width: 20%;"></div></div>
+        <div class="skill-box">
+            <span>Unity & C#</span>
+            <div class="skill-bar"><div class="skill-per" style="width: 30%;"></div></div>
         </div>
-        <p><span class="tag">HTML: %20</span></p>
+        <div class="skill-box">
+            <span>HTML & CSS</span>
+            <div class="skill-bar"><div class="skill-per" style="width: 25%;"></div></div>
+        </div>
     </section>
 
     <section class="card" style="text-align: center;">
-        <h2>Discord Sunucumuz</h2>
-        <p>Bize katılmak için butona tıkla!</p>
-        <a href="https://discord.gg/5mVK8gqpY9" target="_blank" class="btn">Discord'a Katıl</a>
+        <h2>İletişim</h2>
+        <p>Topluluğumuza katılmak ve projeleri yakından takip etmek için:</p>
+        <a href="https://discord.gg/5mVK8gqpY9" class="discord-btn" target="_blank">Discord Sunucumuza Katıl</a>
     </section>
 </div>
 
